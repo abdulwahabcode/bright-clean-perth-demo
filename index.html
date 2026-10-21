@@ -20,89 +20,102 @@
   a{text-decoration:none;color:inherit}
   .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
   h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15}
+  svg.ic{flex:none}
 
-  .strip{background:var(--pine-deep);color:#DCEBE4;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:9px 14px}
+  .strip{background:var(--pine-deep);color:#DCEBE4;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:9px 12px}
+  @media(min-width:640px){.strip{font-size:.8rem;letter-spacing:.12em}}
   .strip b{color:#EFC87E}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(246,248,247,.95);backdrop-filter:blur(8px);border-bottom:1px solid #DDE6E2}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand-mark{width:44px;height:44px;border-radius:14px;background:var(--pine);color:#EAF3EE;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,248,247,.96);backdrop-filter:blur(8px);border-bottom:1px solid #DDE6E2}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:10px}
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .brand-mark{width:42px;height:42px;flex:none;border-radius:13px;background:var(--pine);color:#EAF3EE;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:1rem}
   .brand-mark i{color:#EFC87E;font-style:normal}
-  .brand-name{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--pine-deep);line-height:1.1}
-  .brand-sub{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--marigold);font-weight:700}
+  .brand-text{min-width:0}
+  .brand-name{font-family:'Sora',sans-serif;font-size:1.02rem;font-weight:700;color:var(--pine-deep);line-height:1.15;white-space:nowrap}
+  @media(min-width:640px){.brand-name{font-size:1.2rem}}
+  .brand-sub{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);font-weight:700;white-space:nowrap}
+  @media(min-width:640px){.brand-sub{font-size:.66rem}}
   .nav-links{display:none;gap:26px;font-weight:600;font-size:.92rem;color:var(--ink-soft)}
   .nav-links a:hover{color:var(--pine)}
-  @media(min-width:820px){.nav-links{display:flex}}
-  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--pine);color:#F2F7F3;font-weight:700;padding:13px 24px;border-radius:14px;font-size:.95rem;transition:.25s;border:1px solid var(--pine)}
+  @media(min-width:860px){.nav-links{display:flex}}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--pine);color:#F2F7F3;font-weight:700;padding:13px 24px;border-radius:14px;font-size:.95rem;transition:.25s;border:1px solid var(--pine);white-space:nowrap}
   .btn:hover{background:var(--pine-deep);transform:translateY(-1px)}
   .btn.gold{background:var(--marigold);border-color:var(--marigold);color:#FFF8EA}
   .btn.gold:hover{background:#B57A24}
   .btn.ghost{background:transparent;color:var(--pine)}
-  .btn.small{padding:9px 18px;font-size:.88rem;border-radius:11px}
+  .btn.small{padding:9px 14px;font-size:.86rem;border-radius:11px}
+  .btn .wa-ic{width:17px;height:17px}
+  @media(min-width:640px){.btn.small{padding:10px 18px;font-size:.9rem}}
 
-  .hero{padding:54px 0 26px}
-  .hero-grid{display:grid;gap:34px;align-items:center}
+  .hero{padding:44px 0 26px}
+  @media(min-width:920px){.hero{padding:54px 0 26px}}
+  .hero-grid{display:grid;gap:32px;align-items:center}
   @media(min-width:920px){.hero-grid{grid-template-columns:1.02fr .98fr}}
-  .kicker{display:inline-block;font-size:.73rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--pine);background:var(--mint);padding:7px 14px;border-radius:999px;margin-bottom:20px}
-  .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);color:var(--pine-deep);font-weight:800}
+  .kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);background:var(--mint);padding:7px 14px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.05rem,8.6vw,3.6rem);color:var(--pine-deep);font-weight:800;letter-spacing:-.01em}
   .hero h1 em{font-style:normal;color:var(--marigold)}
-  .hero p.lead{margin:20px 0 26px;font-size:1.07rem;color:var(--ink-soft);max-width:33rem}
+  .hero p.lead{margin:18px 0 24px;font-size:1.04rem;color:var(--ink-soft);max-width:33rem}
   .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-  .trust-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
-  .trust{font-size:.8rem;font-weight:700;background:#fff;border:1px solid #DDE6E2;color:var(--pine);padding:7px 13px;border-radius:999px}
-  .trust b{color:var(--marigold)}
+  .trust-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .trust{display:inline-flex;align-items:center;gap:7px;font-size:.79rem;font-weight:700;background:#fff;border:1px solid #DDE6E2;color:var(--pine);padding:7px 12px;border-radius:999px}
+  .trust svg{width:14px;height:14px;color:var(--marigold)}
   .hero-photo{position:relative}
-  .hero-photo img{border-radius:26px;aspect-ratio:4/4.3;object-fit:cover;width:100%;box-shadow:0 24px 50px rgba(9,42,40,.22)}
-  .hero-card{position:absolute;left:-10px;bottom:22px;background:#fff;border-radius:16px;box-shadow:0 16px 36px rgba(9,42,40,.2);padding:14px 18px;display:flex;gap:12px;align-items:center}
-  .hero-card .stars{color:var(--marigold);font-size:1rem;letter-spacing:2px}
-  .hero-card b{font-family:'Sora',sans-serif;color:var(--pine-deep);font-size:.95rem;display:block;line-height:1.25}
-  .hero-card span{font-size:.78rem;color:var(--ink-soft)}
-  .spots{position:absolute;right:14px;top:14px;background:var(--marigold);color:#FFF8EA;font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 13px;border-radius:999px;box-shadow:0 10px 22px rgba(9,42,40,.25)}
+  .hero-photo img{border-radius:24px;aspect-ratio:4/4.1;object-fit:cover;width:100%;box-shadow:0 24px 50px rgba(9,42,40,.22)}
+  @media(min-width:920px){.hero-photo img{aspect-ratio:4/4.3}}
+  .hero-card{position:absolute;left:12px;bottom:14px;background:#fff;border-radius:14px;box-shadow:0 16px 36px rgba(9,42,40,.2);padding:12px 16px}
+  .hero-card .stars{color:var(--marigold);display:flex;gap:2px;margin-bottom:3px}
+  .hero-card b{font-family:'Sora',sans-serif;color:var(--pine-deep);font-size:.92rem;display:block;line-height:1.25}
+  .hero-card span{font-size:.76rem;color:var(--ink-soft)}
+  .spots{position:absolute;right:12px;top:12px;background:var(--marigold);color:#FFF8EA;font-weight:800;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;padding:8px 12px;border-radius:999px;box-shadow:0 10px 22px rgba(9,42,40,.25)}
 
-  section{padding:62px 0}
-  .sec-head{max-width:640px;margin-bottom:36px}
-  .sec-head h2{font-size:clamp(1.8rem,4vw,2.45rem);color:var(--pine-deep);font-weight:700}
+  section{padding:58px 0}
+  .sec-head{max-width:640px;margin-bottom:34px}
+  .sec-head h2{font-size:clamp(1.75rem,4vw,2.45rem);color:var(--pine-deep);font-weight:700}
   .sec-head p{color:var(--ink-soft);margin-top:12px}
   .sec-head .kicker{margin-bottom:14px}
 
-  .svc-grid{display:grid;gap:18px}
+  .svc-grid{display:grid;gap:16px}
   @media(min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
   @media(min-width:1020px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
   .svc{background:#fff;border:1px solid #E1E9E5;border-radius:20px;padding:26px 22px;transition:.25s}
   .svc:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(9,42,40,.1)}
-  .svc .icon{width:52px;height:52px;border-radius:15px;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:1.45rem;margin-bottom:16px}
-  .svc h3{font-size:1.08rem;color:var(--pine-deep);margin-bottom:8px}
+  .svc .icon{width:52px;height:52px;border-radius:15px;background:var(--mint);color:var(--pine);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .svc h3{font-size:1.07rem;color:var(--pine-deep);margin-bottom:8px}
   .svc p{font-size:.9rem;color:var(--ink-soft)}
-  .svc a{display:inline-block;margin-top:14px;font-weight:700;font-size:.86rem;color:var(--marigold)}
+  .svc a{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:700;font-size:.86rem;color:var(--marigold)}
+  .svc a svg{width:15px;height:15px}
 
   .split{display:grid;gap:30px;align-items:center}
   @media(min-width:920px){.split{grid-template-columns:1fr 1fr}}
   .split img{border-radius:24px;aspect-ratio:4/3.1;object-fit:cover;width:100%}
   .check{list-style:none;display:grid;gap:13px;margin-top:22px}
   .check li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem}
-  .check .tick{flex:none;width:24px;height:24px;border-radius:50%;background:var(--pine);color:#EAF3EE;display:flex;align-items:center;justify-content:center;font-size:.8rem;margin-top:2px}
+  .check .tick{flex:none;width:24px;height:24px;border-radius:50%;background:var(--pine);color:#EAF3EE;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .check .tick svg{width:13px;height:13px}
   .check b{color:var(--pine-deep)}
 
-  .steps-band{background:var(--porcelain-2);border-radius:28px;padding:44px 30px}
+  .steps-band{background:var(--porcelain-2);border-radius:26px;padding:40px 26px}
+  @media(min-width:920px){.steps-band{padding:44px 30px}}
   .step-grid{display:grid;gap:26px;margin-top:28px}
   @media(min-width:860px){.step-grid{grid-template-columns:repeat(3,1fr)}}
   .step .num{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--marigold)}
   .step h3{color:var(--pine-deep);font-size:1.1rem;margin:6px 0 8px}
   .step p{font-size:.92rem;color:var(--ink-soft)}
 
-  .cta{background:var(--pine);border-radius:28px;padding:52px 30px;text-align:center;color:#DCEBE4}
-  .cta h2{color:#F4F9F5;font-size:clamp(1.9rem,4.5vw,2.55rem);font-weight:800}
+  .cta{background:var(--pine);border-radius:26px;padding:48px 26px;text-align:center;color:#DCEBE4}
+  .cta h2{color:#F4F9F5;font-size:clamp(1.85rem,4.5vw,2.55rem);font-weight:800}
   .cta p{max-width:32rem;margin:14px auto 28px;color:#BFD4CB}
-  .cta .btn{background:#F4F9F5;color:var(--pine-deep);border-color:#F4F9F5;font-size:1.02rem;padding:15px 30px}
+  .cta .btn{background:#F4F9F5;color:var(--pine-deep);border-color:#F4F9F5;font-size:1rem;padding:15px 28px}
   .cta .btn:hover{background:#fff}
+  .cta .btn .wa-ic{color:#1FA855;width:20px;height:20px}
   .cta small{display:block;margin-top:16px;color:#93B3A7;font-size:.82rem}
 
-  footer{padding:38px 0 46px;color:var(--ink-soft);font-size:.88rem}
-  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;border-top:1px solid #DDE6E2;padding-top:24px}
+  footer{padding:36px 0 44px;color:var(--ink-soft);font-size:.88rem}
+  .foot{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;border-top:1px solid #DDE6E2;padding-top:24px}
   footer b{color:var(--pine-deep);font-family:'Sora',sans-serif}
-  .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#1FA855;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(9,42,40,.35)}
-  .float-wa svg{width:30px;height:30px;fill:#fff}
+  .float-wa{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(9,42,40,.35)}
+  .float-wa svg{width:29px;height:29px;fill:#fff}
 </style>
 </head>
 <body>
@@ -113,14 +126,14 @@
   <div class="wrap nav">
     <a class="brand" href="#">
       <span class="brand-mark">B<i>C</i></span>
-      <span><span class="brand-name">Bright Clean Perth</span><br><span class="brand-sub">Cleaning Service</span></span>
+      <span class="brand-text"><span class="brand-name">Bright Clean Perth</span><br><span class="brand-sub">Cleaning Service</span></span>
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#why">Why Bright Clean</a>
       <a href="#book">How to Book</a>
     </nav>
-    <a class="btn small" href="https://wa.me/61478812415" target="_blank" rel="noopener">Book on WhatsApp</a>
+    <a class="btn small" href="https://wa.me/61478812415" target="_blank" rel="noopener"><svg class="wa-ic" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp</a>
   </div>
 </header>
 
@@ -131,22 +144,41 @@
       <h1>A brighter home, <em>without lifting a finger.</em></h1>
       <p class="lead">Excellent cleaning service at your home — reliable, honest and high-quality, from a local Perth team that treats your place like their own. Regular cleans, end of lease, commercial and NDIS support.</p>
       <div class="hero-cta">
-        <a class="btn gold" href="https://wa.me/61478812415" target="_blank" rel="noopener">Book Your Clean Today</a>
+        <a class="btn gold" href="https://wa.me/61478812415" target="_blank" rel="noopener"><svg class="wa-ic" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Book Your Clean Today</a>
         <a class="btn ghost" href="#services">See Services</a>
       </div>
       <div class="trust-row">
-        <span class="trust"><b>✓</b> Police-checked</span>
-        <span class="trust"><b>✓</b> ABN registered</span>
-        <span class="trust"><b>✓</b> Pet-friendly</span>
-        <span class="trust"><b>✓</b> Own equipment &amp; products</span>
-        <span class="trust"><b>✓</b> 80+ happy customers</span>
+        <span class="trust"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" /></svg> Police-checked</span>
+        <span class="trust"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m9 12 2 2 4-4" /></svg> ABN registered</span>
+        <span class="trust"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2" />
+  <circle cx="18" cy="8" r="2" />
+  <circle cx="20" cy="16" r="2" />
+  <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" /></svg> Pet-friendly</span>
+        <span class="trust"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h.01" />
+  <path d="M7 5h.01" />
+  <path d="M11 7h.01" />
+  <path d="M3 7h.01" />
+  <path d="M7 9h.01" />
+  <path d="M3 11h.01" />
+  <rect width="4" height="4" x="15" y="5" />
+  <path d="m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2" />
+  <path d="m13 14 8-2" />
+  <path d="m13 19 8-2" /></svg> Own equipment &amp; products</span>
+        <span class="trust"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <circle cx="9" cy="7" r="4" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg> 80+ happy customers</span>
       </div>
     </div>
     <div class="hero-photo">
       <span class="spots">New spots available</span>
       <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1000&q=80&auto=format&fit=crop" alt="Professional home cleaning in Perth">
       <div class="hero-card">
-        <div><div class="stars">★★★★★</div><b>94% recommend</b><span>12 reviews on Facebook</span></div>
+        <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg></div>
+        <b>94% recommend</b>
+        <span>12 reviews on Facebook</span>
       </div>
     </div>
   </div>
@@ -161,28 +193,39 @@
     </div>
     <div class="svc-grid">
       <div class="svc">
-        <div class="icon">🏠</div>
+        <div class="icon"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></div>
         <h3>Regular Home Cleaning</h3>
         <p>Weekly or fortnightly general cleaning that keeps your home fresh, tidy and stress-free.</p>
-        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
       <div class="svc">
-        <div class="icon">🔑</div>
+        <div class="icon"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+  <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" /></svg></div>
         <h3>End of Lease Cleaning</h3>
         <p>Detailed vacate cleaning to help you leave the property spotless and get your bond back.</p>
-        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
       <div class="svc">
-        <div class="icon">🏢</div>
+        <div class="icon"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+  <path d="M10 6h4" />
+  <path d="M10 10h4" />
+  <path d="M10 14h4" />
+  <path d="M10 18h4" /></svg></div>
         <h3>Commercial Cleaning</h3>
         <p>Reliable cleaning for offices and workplaces across Perth — done properly, every visit.</p>
-        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
       <div class="svc">
-        <div class="icon">💛</div>
+        <div class="icon"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+  <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66" />
+  <path d="m18 15-2-2" />
+  <path d="m15 18-2-2" /></svg></div>
         <h3>NDIS Support Cleaning</h3>
         <p>Respectful, dependable cleaning support for NDIS clients and their homes.</p>
-        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
@@ -193,13 +236,13 @@
     <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1000&q=80&auto=format&fit=crop" alt="Detailed cleaning with care">
     <div>
       <span class="kicker">Why Bright Clean</span>
-      <h2 style="font-size:clamp(1.8rem,4vw,2.4rem);color:var(--pine-deep)">Proudly serving Perth with honest, high-quality cleaning</h2>
+      <h2 style="font-size:clamp(1.75rem,4vw,2.4rem);color:var(--pine-deep)">Proudly serving Perth with honest, high-quality cleaning</h2>
       <ul class="check">
-        <li><span class="tick">✓</span><span><b>Police-checked &amp; ABN registered</b> — a local business you can trust in your home.</span></li>
-        <li><span class="tick">✓</span><span><b>We bring everything</b> — all equipment and products included, nothing for you to supply.</span></li>
-        <li><span class="tick">✓</span><span><b>Pet-friendly team</b> — your furry family members are in safe, caring hands.</span></li>
-        <li><span class="tick">✓</span><span><b>80+ happy customers</b> — and a 94% recommend rating from Facebook reviews.</span></li>
-        <li><span class="tick">✓</span><span><b>Easy WhatsApp booking</b> — message, get your spot, and enjoy a brighter home.</span></li>
+        <li><span class="tick"><svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span><b>Police-checked &amp; ABN registered</b> — a local business you can trust in your home.</span></li>
+        <li><span class="tick"><svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span><b>We bring everything</b> — all equipment and products included, nothing for you to supply.</span></li>
+        <li><span class="tick"><svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span><b>Pet-friendly team</b> — your furry family members are in safe, caring hands.</span></li>
+        <li><span class="tick"><svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span><b>80+ happy customers</b> — and a 94% recommend rating from Facebook reviews.</span></li>
+        <li><span class="tick"><svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span><b>Easy WhatsApp booking</b> — message, get your spot, and enjoy a brighter home.</span></li>
       </ul>
     </div>
   </div>
@@ -224,7 +267,7 @@
     <div class="cta">
       <h2>Book your clean today.</h2>
       <p>New spots are available now across Perth. Message Bright Clean Perth on WhatsApp for a quick quote.</p>
-      <a class="btn" href="https://wa.me/61478812415" target="_blank" rel="noopener">WhatsApp 0478 812 415</a>
+      <a class="btn" href="https://wa.me/61478812415" target="_blank" rel="noopener"><svg class="wa-ic" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp 0478 812 415</a>
       <small>Kardinya, Perth WA · brightclean.perth@gmail.com</small>
     </div>
   </div>
@@ -237,9 +280,7 @@
   </div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/61478812415" target="_blank" rel="noopener" aria-label="Book on WhatsApp">
-  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.1c1.4.8 3 1.2 4.7 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.9-1.9 1.7-2.6 1.8-.7.1-1.5.4-5-1-4.2-1.7-6.9-6-7.1-6.3-.2-.3-1.7-2.3-1.7-4.3s1.1-3 1.5-3.4c.4-.4.8-.5 1.1-.5h.8c.3 0 .6 0 .9.7l1.3 3.1c.1.3.2.6 0 .9l-.6.9-.6.7c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l3.1 1.5c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
-</a>
+<a class="float-wa" href="https://wa.me/61478812415" target="_blank" rel="noopener" aria-label="Book on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
 </body>
 </html>
