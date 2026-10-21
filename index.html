@@ -117,6 +117,11 @@
   .float-wa{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(9,42,40,.35)}
   .float-wa svg{width:29px;height:29px;fill:#fff}
 </style>
+
+<style>
+/* Root-cause fix 2026-10-21: header container ki side padding override ho rahi thi — header kinaron se chipakta tha */
+header .wrap{padding-left:20px;padding-right:20px}
+</style>
 </head>
 <body>
 
