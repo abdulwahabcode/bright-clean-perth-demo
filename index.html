@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Clean Perth — Excellent Cleaning Service at Your Home</title>
+<meta name="description" content="Bright Clean Perth — regular, end of lease, commercial and NDIS cleaning across Perth. Police-checked, ABN registered, pet-friendly. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --porcelain:#F6F8F7; --porcelain-2:#EBF1EF; --ink:#22312E; --ink-soft:#5B6B66;
+    --pine:#0E3A38; --pine-deep:#092A28; --marigold:#C98A2D; --mint:#DCEBE4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--ink);line-height:1.65;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15}
+
+  .strip{background:var(--pine-deep);color:#DCEBE4;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:9px 14px}
+  .strip b{color:#EFC87E}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,248,247,.95);backdrop-filter:blur(8px);border-bottom:1px solid #DDE6E2}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:44px;height:44px;border-radius:14px;background:var(--pine);color:#EAF3EE;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem}
+  .brand-mark i{color:#EFC87E;font-style:normal}
+  .brand-name{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--pine-deep);line-height:1.1}
+  .brand-sub{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--marigold);font-weight:700}
+  .nav-links{display:none;gap:26px;font-weight:600;font-size:.92rem;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--pine)}
+  @media(min-width:820px){.nav-links{display:flex}}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--pine);color:#F2F7F3;font-weight:700;padding:13px 24px;border-radius:14px;font-size:.95rem;transition:.25s;border:1px solid var(--pine)}
+  .btn:hover{background:var(--pine-deep);transform:translateY(-1px)}
+  .btn.gold{background:var(--marigold);border-color:var(--marigold);color:#FFF8EA}
+  .btn.gold:hover{background:#B57A24}
+  .btn.ghost{background:transparent;color:var(--pine)}
+  .btn.small{padding:9px 18px;font-size:.88rem;border-radius:11px}
+
+  .hero{padding:54px 0 26px}
+  .hero-grid{display:grid;gap:34px;align-items:center}
+  @media(min-width:920px){.hero-grid{grid-template-columns:1.02fr .98fr}}
+  .kicker{display:inline-block;font-size:.73rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--pine);background:var(--mint);padding:7px 14px;border-radius:999px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.3rem,6vw,3.7rem);color:var(--pine-deep);font-weight:800}
+  .hero h1 em{font-style:normal;color:var(--marigold)}
+  .hero p.lead{margin:20px 0 26px;font-size:1.07rem;color:var(--ink-soft);max-width:33rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+  .trust-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+  .trust{font-size:.8rem;font-weight:700;background:#fff;border:1px solid #DDE6E2;color:var(--pine);padding:7px 13px;border-radius:999px}
+  .trust b{color:var(--marigold)}
+  .hero-photo{position:relative}
+  .hero-photo img{border-radius:26px;aspect-ratio:4/4.3;object-fit:cover;width:100%;box-shadow:0 24px 50px rgba(9,42,40,.22)}
+  .hero-card{position:absolute;left:-10px;bottom:22px;background:#fff;border-radius:16px;box-shadow:0 16px 36px rgba(9,42,40,.2);padding:14px 18px;display:flex;gap:12px;align-items:center}
+  .hero-card .stars{color:var(--marigold);font-size:1rem;letter-spacing:2px}
+  .hero-card b{font-family:'Sora',sans-serif;color:var(--pine-deep);font-size:.95rem;display:block;line-height:1.25}
+  .hero-card span{font-size:.78rem;color:var(--ink-soft)}
+  .spots{position:absolute;right:14px;top:14px;background:var(--marigold);color:#FFF8EA;font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 13px;border-radius:999px;box-shadow:0 10px 22px rgba(9,42,40,.25)}
+
+  section{padding:62px 0}
+  .sec-head{max-width:640px;margin-bottom:36px}
+  .sec-head h2{font-size:clamp(1.8rem,4vw,2.45rem);color:var(--pine-deep);font-weight:700}
+  .sec-head p{color:var(--ink-soft);margin-top:12px}
+  .sec-head .kicker{margin-bottom:14px}
+
+  .svc-grid{display:grid;gap:18px}
+  @media(min-width:700px){.svc-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1020px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+  .svc{background:#fff;border:1px solid #E1E9E5;border-radius:20px;padding:26px 22px;transition:.25s}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(9,42,40,.1)}
+  .svc .icon{width:52px;height:52px;border-radius:15px;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:1.45rem;margin-bottom:16px}
+  .svc h3{font-size:1.08rem;color:var(--pine-deep);margin-bottom:8px}
+  .svc p{font-size:.9rem;color:var(--ink-soft)}
+  .svc a{display:inline-block;margin-top:14px;font-weight:700;font-size:.86rem;color:var(--marigold)}
+
+  .split{display:grid;gap:30px;align-items:center}
+  @media(min-width:920px){.split{grid-template-columns:1fr 1fr}}
+  .split img{border-radius:24px;aspect-ratio:4/3.1;object-fit:cover;width:100%}
+  .check{list-style:none;display:grid;gap:13px;margin-top:22px}
+  .check li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem}
+  .check .tick{flex:none;width:24px;height:24px;border-radius:50%;background:var(--pine);color:#EAF3EE;display:flex;align-items:center;justify-content:center;font-size:.8rem;margin-top:2px}
+  .check b{color:var(--pine-deep)}
+
+  .steps-band{background:var(--porcelain-2);border-radius:28px;padding:44px 30px}
+  .step-grid{display:grid;gap:26px;margin-top:28px}
+  @media(min-width:860px){.step-grid{grid-template-columns:repeat(3,1fr)}}
+  .step .num{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--marigold)}
+  .step h3{color:var(--pine-deep);font-size:1.1rem;margin:6px 0 8px}
+  .step p{font-size:.92rem;color:var(--ink-soft)}
+
+  .cta{background:var(--pine);border-radius:28px;padding:52px 30px;text-align:center;color:#DCEBE4}
+  .cta h2{color:#F4F9F5;font-size:clamp(1.9rem,4.5vw,2.55rem);font-weight:800}
+  .cta p{max-width:32rem;margin:14px auto 28px;color:#BFD4CB}
+  .cta .btn{background:#F4F9F5;color:var(--pine-deep);border-color:#F4F9F5;font-size:1.02rem;padding:15px 30px}
+  .cta .btn:hover{background:#fff}
+  .cta small{display:block;margin-top:16px;color:#93B3A7;font-size:.82rem}
+
+  footer{padding:38px 0 46px;color:var(--ink-soft);font-size:.88rem}
+  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;border-top:1px solid #DDE6E2;padding-top:24px}
+  footer b{color:var(--pine-deep);font-family:'Sora',sans-serif}
+  .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#1FA855;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(9,42,40,.35)}
+  .float-wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="strip">Now booking — <b>new spots available</b> across Perth</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">B<i>C</i></span>
+      <span><span class="brand-name">Bright Clean Perth</span><br><span class="brand-sub">Cleaning Service</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Bright Clean</a>
+      <a href="#book">How to Book</a>
+    </nav>
+    <a class="btn small" href="https://wa.me/61478812415" target="_blank" rel="noopener">Book on WhatsApp</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Kardinya · Perth, WA</span>
+      <h1>A brighter home, <em>without lifting a finger.</em></h1>
+      <p class="lead">Excellent cleaning service at your home — reliable, honest and high-quality, from a local Perth team that treats your place like their own. Regular cleans, end of lease, commercial and NDIS support.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="https://wa.me/61478812415" target="_blank" rel="noopener">Book Your Clean Today</a>
+        <a class="btn ghost" href="#services">See Services</a>
+      </div>
+      <div class="trust-row">
+        <span class="trust"><b>✓</b> Police-checked</span>
+        <span class="trust"><b>✓</b> ABN registered</span>
+        <span class="trust"><b>✓</b> Pet-friendly</span>
+        <span class="trust"><b>✓</b> Own equipment &amp; products</span>
+        <span class="trust"><b>✓</b> 80+ happy customers</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <span class="spots">New spots available</span>
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1000&q=80&auto=format&fit=crop" alt="Professional home cleaning in Perth">
+      <div class="hero-card">
+        <div><div class="stars">★★★★★</div><b>94% recommend</b><span>12 reviews on Facebook</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">What we clean</span>
+      <h2>Cleaning for every kind of home</h2>
+      <p>Weekly, fortnightly or one-off — pick the clean that fits your life, and Bright Clean Perth handles the rest.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="icon">🏠</div>
+        <h3>Regular Home Cleaning</h3>
+        <p>Weekly or fortnightly general cleaning that keeps your home fresh, tidy and stress-free.</p>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+      </div>
+      <div class="svc">
+        <div class="icon">🔑</div>
+        <h3>End of Lease Cleaning</h3>
+        <p>Detailed vacate cleaning to help you leave the property spotless and get your bond back.</p>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+      </div>
+      <div class="svc">
+        <div class="icon">🏢</div>
+        <h3>Commercial Cleaning</h3>
+        <p>Reliable cleaning for offices and workplaces across Perth — done properly, every visit.</p>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+      </div>
+      <div class="svc">
+        <div class="icon">💛</div>
+        <h3>NDIS Support Cleaning</h3>
+        <p>Respectful, dependable cleaning support for NDIS clients and their homes.</p>
+        <a href="https://wa.me/61478812415" target="_blank" rel="noopener">Get a quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="padding-top:8px">
+  <div class="wrap split">
+    <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1000&q=80&auto=format&fit=crop" alt="Detailed cleaning with care">
+    <div>
+      <span class="kicker">Why Bright Clean</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.4rem);color:var(--pine-deep)">Proudly serving Perth with honest, high-quality cleaning</h2>
+      <ul class="check">
+        <li><span class="tick">✓</span><span><b>Police-checked &amp; ABN registered</b> — a local business you can trust in your home.</span></li>
+        <li><span class="tick">✓</span><span><b>We bring everything</b> — all equipment and products included, nothing for you to supply.</span></li>
+        <li><span class="tick">✓</span><span><b>Pet-friendly team</b> — your furry family members are in safe, caring hands.</span></li>
+        <li><span class="tick">✓</span><span><b>80+ happy customers</b> — and a 94% recommend rating from Facebook reviews.</span></li>
+        <li><span class="tick">✓</span><span><b>Easy WhatsApp booking</b> — message, get your spot, and enjoy a brighter home.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:8px">
+  <div class="wrap">
+    <div class="steps-band">
+      <span class="kicker">Booking is easy</span>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.3rem);color:var(--pine-deep)">Three steps to a brighter home</h2>
+      <div class="step-grid">
+        <div class="step"><div class="num">01</div><h3>Message on WhatsApp</h3><p>Tell us your suburb, home size and the type of clean you need.</p></div>
+        <div class="step"><div class="num">02</div><h3>Get your quote &amp; spot</h3><p>We confirm a fair price and lock in a time that suits you — new spots are open now.</p></div>
+        <div class="step"><div class="num">03</div><h3>Relax — we clean</h3><p>Our team arrives with everything included and leaves your home bright and fresh.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Book your clean today.</h2>
+      <p>New spots are available now across Perth. Message Bright Clean Perth on WhatsApp for a quick quote.</p>
+      <a class="btn" href="https://wa.me/61478812415" target="_blank" rel="noopener">WhatsApp 0478 812 415</a>
+      <small>Kardinya, Perth WA · brightclean.perth@gmail.com</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b>Bright Clean Perth</b> — Excellent cleaning service at your home</div>
+    <div>Perth, WA · WhatsApp: 0478 812 415</div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/61478812415" target="_blank" rel="noopener" aria-label="Book on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.1c1.4.8 3 1.2 4.7 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.9-1.9 1.7-2.6 1.8-.7.1-1.5.4-5-1-4.2-1.7-6.9-6-7.1-6.3-.2-.3-1.7-2.3-1.7-4.3s1.1-3 1.5-3.4c.4-.4.8-.5 1.1-.5h.8c.3 0 .6 0 .9.7l1.3 3.1c.1.3.2.6 0 .9l-.6.9-.6.7c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.3.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l3.1 1.5c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+</a>
+
+</body>
+</html>
